@@ -1,7 +1,3 @@
-# Server B – Shadow Control
+﻿# University Deploy – Server-B-Referenz
 
-Diese lokale Ordnerstruktur enthält eine Browser-basierte Shadow-Ansicht für Server B.
-
-- Datenquelle: data.json
-- Oberfläche: index.html
-- Ziel: sichtbare, verschiebbare Module mit Rollenlogik und Security-Hinweisen
+Diese Datei ist nur eine Referenzstruktur. Die aktuelle Runtime befindet sich im Hauptprojekt unter [../../server/server.js](../../server/server.js).

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finanziers01 – Projektarchitektur</title>
+  <style>
+    :root { --bg:#07111d; --panel:rgba(7,17,29,.92); --text:#f5f7ff; --muted:#9fb0c9; --accent:#4f8cff; --accent-2:#f4c542; --border:rgba(255,255,255,.16); }
+    *{box-sizing:border-box} body{margin:0;font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#07111d,#11233d 45%,#0b1626);color:var(--text);line-height:1.7} .page{max-width:980px;margin:0 auto;padding:24px 18px 64px}.topbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}.nav-link{padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--border);color:var(--text);text-decoration:none;font-weight:700}.nav-link:hover{background:rgba(79,140,255,.22)}.hero,.card{background:var(--panel);border:1px solid var(--border);border-radius:22px;padding:22px;box-shadow:0 18px 44px rgba(0,0,0,.22)}.hero{margin-bottom:20px}.kicker{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(244,197,66,.2);color:var(--accent-2);font-weight:700;margin-bottom:10px} h1,h2,h3{margin-top:0} p,li{color:var(--muted)} ul{padding-left:18px}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar">
+      <a class="nav-link" href="./index.html">← Portal</a>
+      <a class="nav-link" href="./master-dokument.html">Master-Dokument</a>
+      <a class="nav-link" href="./handbuch.html">Handbuch</a>
+    </nav>
+    <section class="hero">
+      <div class="kicker">PROJEKTARCHITEKTUR</div>
+      <h1>Root-System und Aufbau der Plattform</h1>
+      <p>Die Architektur ist bewusst browserbasiert, lokal nutzbar und auf Produktreife ausgelegt. Sie bündelt Portal, Business Suite, Bewerbung, Runtime-Sicht und öffentliche Dokumentation in einem gemeinsamen Raum.</p>
+    </section>
+    <section class="card">
+      <h2>Kernelemente</h2>
+      <ul>
+        <li>Frontend-Portal im Arbeitsroot</li>
+        <li>Business Suite und Bewerbungssuite</li>
+        <li>Server B als sichtbare Runtime- und Shadow-Ansicht</li>
+        <li>Öffentliche Public-Space-Struktur für GitHub Pages</li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Leitprinzipien</h2>
+      <ul>
+        <li>Browserbasiert und direkt nutzbar</li>
+        <li>Vanilla HTML, CSS und JavaScript</li>
+        <li>Klare Navigation, sichtbare Produktstruktur und lokale Persistenz</li>
+        <li>Spätere Erweiterung mit echter Datenbank und Backend</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

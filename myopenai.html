@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyOpenAI – Your personal digital ANGEBOT partner PROGRAM</title>
+    <style>
+        :root {
+            --bg: #07111d;
+            --bg2: #0f1d33;
+            --text: #f5f7ff;
+            --muted: rgba(245,247,255,0.8);
+            --accent: #ffb84d;
+            --accent2: #4f8cff;
+            --success: #3edb93;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(79,140,255,0.28), transparent 24%),
+                radial-gradient(circle at 85% 0%, rgba(255,184,77,0.18), transparent 26%),
+                linear-gradient(135deg, var(--bg) 0%, var(--bg2) 55%, var(--bg) 100%);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            filter: blur(60px);
+            opacity: 0.28;
+            animation: drift 10s ease-in-out infinite alternate;
+        }
+
+        body::before {
+            width: 260px;
+            height: 260px;
+            left: -80px;
+            top: -60px;
+            background: rgba(79,140,255,0.32);
+        }
+
+        body::after {
+            width: 300px;
+            height: 300px;
+            right: -100px;
+            bottom: -60px;
+            background: rgba(255,184,77,0.26);
+            animation-duration: 12s;
+        }
+
+        @keyframes drift {
+            from { transform: translate3d(0,0,0) scale(1); }
+            to { transform: translate3d(24px, 20px, 0) scale(1.08); }
+        }
+
+        .page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 28px 20px 56px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(79,140,255,0.28), rgba(255,184,77,0.18));
+            border: 1px solid rgba(255,184,77,0.34);
+            border-radius: 32px;
+            padding: 32px;
+            box-shadow: 0 26px 84px rgba(0,0,0,0.32);
+            margin-bottom: 22px;
+            backdrop-filter: blur(18px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+            transform: translateX(-100%);
+            animation: shine 6s linear infinite;
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: auto -20px -40px auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,255,255,0.18), transparent 72%);
+            pointer-events: none;
+        }
+
+        @keyframes shine {
+            100% { transform: translateX(100%); }
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.18);
+            color: var(--accent);
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.8em;
+            margin-bottom: 12px;
+        }
+
+        h1 { font-size: clamp(1.7rem, 2.6vw, 2.5rem); margin-bottom: 10px; }
+        p { color: var(--muted); }
+
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 16px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 800;
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.16);
+            background: rgba(255,255,255,0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+            background: rgba(255,255,255,0.16);
+        }
+        .btn.primary {
+            background: linear-gradient(135deg, var(--accent2), var(--accent));
+            color: #07111d;
+            border: none;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 20px;
+            padding: 18px;
+            box-shadow: 0 14px 34px rgba(0,0,0,0.18);
+            backdrop-filter: blur(10px);
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(255,184,77,0.3);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.24);
+        }
+
+        .card h3 { margin-bottom: 8px; color: var(--accent); }
+        .card ul { padding-left: 18px; color: var(--muted); }
+        .section {
+            margin-top: 22px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 22px;
+            padding: 20px;
+            box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+            backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            inset: 0 0 auto 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent2), var(--accent));
+        }
+        .section h2 { margin-bottom: 10px; color: var(--accent); }
+        .value-strip {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 16px;
+            margin-top: 18px;
+        }
+        .value-box {
+            padding: 16px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+        }
+        .value-box h3 { color: var(--accent); margin-bottom: 8px; }
+        .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+        .pill {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(79,140,255,0.16);
+            border: 1px solid rgba(79,140,255,0.28);
+            color: var(--text);
+            font-size: 0.95em;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+        .footer-note { margin-top: 18px; color: var(--muted); font-size: 0.95em; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <section class="hero">
+            <div class="badge">⚡ Unser volumenhaltiges 2³HQ</div>
+            <h1>MyOpenAI – Your personal digital ANGEBOT partner PROGRAM</h1>
+            <p>Ein sichtbar aufgestelltes digitales Angebots- und Partnerprogramm für Nutzung, Präsentation, Zusammenarbeit und Vertrieb – klar, direkt und wirkungsvoll im Gesamtsystem verankert.</p>
+            <div class="actions">
+                <a class="btn primary" href="https://myopenai.lovable.app/" target="_blank" rel="noreferrer">Zum Angebot ↗</a>
+                <a class="btn" href="./index.html">Zum Portal zurück</a>
+            </div>
+        </section>
+
+        <section class="grid">
+            <article class="card">
+                <h3>🧭 Digitale Angebotsführung</h3>
+                <p>Das Programm macht das Angebot sichtbar, verständlich und direkt verfügbar – für Partner, Kunden und Mitwirkende.</p>
+            </article>
+            <article class="card">
+                <h3>🤝 Persönlicher Partner-Raum</h3>
+                <p>MyOpenAI wird als digitaler Angebots- und Projektpartner in der Plattform positioniert.</p>
+            </article>
+            <article class="card">
+                <h3>📦 Volumenhaltiges 2³HQ</h3>
+                <p>Das Angebot erscheint als klarer, strategischer und sofort erreichbarer Kern des Gesamtsystems.</p>
+            </article>
+            <article class="card">
+                <h3>✨ Sichtbarkeit im Root-Portal</h3>
+                <ul>
+                    <li>Prominenter Einstieg aus dem Hauptportal</li>
+                    <li>Direkte Verbindung zur Angebotsseite</li>
+                    <li>Starke Brand- und Partnerpositionierung</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="section">
+            <h2>Was das Programm auszeichnet</h2>
+            <p>MyOpenAI steht für eine verbindliche digitale Präsenz, eine klare Angebotslogik und einen starken, sichtbaren Einstieg in das große System.</p>
+            <div class="value-strip">
+                <div class="value-box">
+                    <h3>Wertigkeit und Positionierung</h3>
+                    <p>Das Programm wird als strategischer, persönlicher und unmittelbar nutzbarer Partner im Gesamtportal positioniert.</p>
+                </div>
+                <div class="value-box">
+                    <h3>Premium-Charakter</h3>
+                    <p>Klare Sprache, starke visuelle Hierarchie und ein hochwertiger Zugang schaffen sofort Vertrauen und Sichtbarkeit.</p>
+                </div>
+            </div>
+            <div class="pill-row">
+                <span class="pill">Partnerorientiert</span>
+                <span class="pill">Digital sichtbar</span>
+                <span class="pill">Starkes Branding</span>
+                <span class="pill">Direkter Einstieg</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Jetzt aktiv werden</h2>
+            <p>Der nächste Schritt ist der direkte Auftritt im Angebot selbst – klar, wirkungsvoll und sofort erreichbar.</p>
+            <div class="actions">
+                <a class="btn primary" href="https://myopenai.lovable.app/" target="_blank" rel="noreferrer">Jetzt zum Angebot ↗</a>
+                <a class="btn" href="./index.html">Zurück zum Portal</a>
+            </div>
+        </section>
+
+        <p class="footer-note">Diese Seite steht als eigener Einstiegspunkt für das MyOpenAI-Angebot bereit und ist direkt aus dem öffentlichen Portal erreichbar.</p>
+    </div>
+</body>
+</html>

@@ -98,7 +98,7 @@
     <section class="hero">
       <div class="pill">Gesamt-Handbuch • Root • Portal • Server B</div>
       <h1>Finanziers01 ist der sichtbare, klare und dauerhafte Raum für Nutzung, Besitz und Weiterentwicklung.</h1>
-      <p>Dieses Handbuch ist direkt aus dem Portal erreichbar und begleitet den Nutzer von der ersten Begegnung bis zur täglichen Nutzung. Es soll immer eindeutig, sichtbar und stimmig wirken – mit hoher Lesbarkeit, starkem Kontrast und einem ansprechenden, würdigen Ausdruck.</p>
+      <p>Dieses Handbuch ist direkt aus dem Portal erreichbar und begleitet den Nutzer von der ersten Begegnung bis zur täglichen Nutzung. Es bündelt die wichtigsten Inhalte aus dem Arbeitsroot und macht sie im Online-Portal sichtbar: Systemübersicht, Runtime, Datenmodelle, Workflows und Produktvision.</p>
     </section>
 
     <section class="grid">
@@ -109,17 +109,17 @@
           <li>Business Suite: <a href="./app/index.html">app/index.html</a></li>
           <li>Bewerbung: <a href="./bewerbung.html">bewerbung.html</a></li>
           <li>Server B: <a href="./app/serverB/index.html">statische Shadow-Ansicht</a> (Vollversion nur lokal mit Node)</li>
-        <li>Master-Dokument: <a href="./MASTER_DOKUMENT.md">Markdown-Dokument</a></li>
-        <li>Online Office: <a href="./office.html">Teilnahme & Support</a></li>
+          <li>Master-Dokument: <a href="./MASTER_DOKUMENT.md">Markdown-Dokument</a></li>
+          <li>Online Office: <a href="./office.html">Teilnahme & Support</a></li>
         </ul>
       </article>
       <article class="card">
         <h2>2. Nutzung</h2>
         <ul>
-          <li>Portal dient als zentrales Zentrum.</li>
-          <li>Business Suite ist für die Unternehmensstruktur gedacht.</li>
-          <li>Bewerbungssuite dient für Profil- und Präsentationsarbeit.</li>
-          <li>Server B zeigt die Sichtbarkeit und die Runtime-Schicht.</li>
+          <li>Das Portal dient als zentrales Zentrum für Nutzer, Gründer, Investoren und Mitwirkende.</li>
+          <li>Die Business Suite ist für Unternehmensstruktur, Prozesse und Präsentationen gedacht.</li>
+          <li>Die Bewerbungssuite dient für Profil-, Medien- und Präsentationsarbeit.</li>
+          <li>Server B zeigt die Sichtbarkeit, Runtime-Schicht und reale Datenlogik.</li>
         </ul>
       </article>
     </section>
@@ -131,15 +131,36 @@
           <li>Start: <code>node server/server.js</code></li>
           <li>Health (nur lokal, Node): <code>http://127.0.0.1:3000/server/api/health</code></li>
           <li>Portal-Root (nur lokal, Node): <code>http://127.0.0.1:3000/</code></li>
+          <li>Wichtige Routen: Health, Auth, Workspaces, Profiles, Investor-Rechner und Master-Dokument.</li>
         </ul>
       </article>
       <article class="card">
-        <h2>4. Design- und Erlebnisprinzipien</h2>
+        <h2>4. Architektur und Datenmodelle</h2>
         <ul>
-          <li>Hoher Kontrast zwischen Hintergrund und Text.</li>
-          <li>Klare, sichtbare Buttons und Navigation.</li>
-          <li>Starke, ruhige, hochwertige Erscheinung.</li>
-          <li>Der Raum soll den Eindruck von Besitz, Sicherheit und Dauer geben.</li>
+          <li>Die Plattform arbeitet browserbasiert mit Vanilla HTML, CSS und JavaScript.</li>
+          <li>Local Storage und JSON-Dateien sichern den ersten produktiven Zustand.</li>
+          <li>Die Kernobjekte sind Nutzer, Sessions, Workspaces, Profiles und Investor-Berechnungen.</li>
+          <li>Die Dokumentation ist Teil der sichtbaren Plattform – nicht nur ein Nebenprodukt.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="grid" style="margin-top:20px;">
+      <article class="card">
+        <h2>5. Produktprinzipien</h2>
+        <ul>
+          <li>Hoher Kontrast und klare Lesbarkeit.</li>
+          <li>Sichtbare Navigation, klare Buttons und starke Struktur.</li>
+          <li>Würdiger, ruhiger, hochwertiger Eindruck für Nutzer und Stakeholder.</li>
+          <li>Die Umgebung soll Vertrauen, Sicherheit und dauerhafte Zugehörigkeit vermitteln.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h2>6. Zukunftsvision</h2>
+        <ul>
+          <li>Das Portal kann zu einem vollständigen Unternehmens-OS werden.</li>
+          <li>Investor-Cockpit, Founder Workspace, Talent-Pipeline und Dokumentenraum sind als nächste Ebene angelegt.</li>
+          <li>Das System ist bewusst so aufgebaut, dass es später mit echter Datenbank und Backend weiterwachsen kann.</li>
         </ul>
       </article>
     </section>
