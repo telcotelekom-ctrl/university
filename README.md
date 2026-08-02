@@ -14,6 +14,36 @@ zusätzliche Live-Funktionen, ist aber nicht erforderlich, damit das System läu
    Live-Features (Companion, Status, Profile, Portfolio). Das Portal erkennt es automatisch
    und arbeitet ohne es sauber im Offline-/Shadow-Modus weiter.
 
+## Universal Visual Runtime (UVR) – Produktivsoftware
+Kein Demo, sondern echte Fabrikations-Standardsoftware. Grundsatz:
+**„Alles ist ein Objekt. Alles ist eine Regel. Alles andere erzeugt die Runtime."**
+- Engine: [shadow/uvr-runtime.js](shadow/uvr-runtime.js) mit `UniversalVisualRuntime`,
+  `createUvrManifest()`, `createUvrSummary()` und `adaptWordPressToUVR()`.
+- Objektmodell: Objekt + Regel + Szene. Renderer-Auswahl automatisch zwischen
+  `html` (DOM vorhanden) und `text` (Node/Fallback) – hardware- und OS-übergreifend kompatibel.
+- Produktions-Manifest: [shadow/portal.vos.json](shadow/portal.vos.json) (`.vos`-Format,
+  Manifest `myopenai.portal`, Hardware-Targets desktop/mobile/tv/terminal/vr/legacy).
+- Portal-Integration: Sektion **„UVR Runtime"** in [index.html](index.html) mit echtem
+  `.vos`-Import (Upload → Parse → Render) und `.vos`-Export (Download des aktiven Manifests).
+- Vision-Seite: [final-cut.html](final-cut.html) – In-N-Out Volume Economy mit funktionierender
+  Wertfunktion `calculateValue(secondsSince2025, multiplier=0.1)`.
+- Gesamtsystem: [finaly-all.html](finaly-all.html) – FINALY ALL (Bildung, Inventur, Organisation,
+  Sprachen, Altersgruppen, Erkenntnis, Wahrheit) mit Curriculum-Generator, Inventur-Checkliste
+  und JSON-Datenmodell.
+- Developer-Bereich: [developer-universum.html](developer-universum.html) – SERVICESOFTWARE TEL1.NL,
+  28 Programmiersprachen level-schaltbar (Dummy→Experte) mit `localStorage`-Speicherung von Name
+  und Level, mehrsprachiger Live-Playground (JavaScript echt ausführbar, andere Sprachen als
+  Ausgabe-Simulation), Konzept-Übersetzer, Snippet-Bibliothek (kopierbare Bausteine),
+  Developer-Curriculum (level-gerechter Lernpfad), Fortschritts-Tracker (gelernte Sprachen/Konzepte
+  mit Fortschrittsbalken), Code-/AI-Hilfen, Developer-A–Z und JSON-Architektur.
+- Developer-Manifest: [developer-manifest.html](developer-manifest.html) – Präambel, 8 Artikel,
+  Code-Standard und JSON-Modell, signiert von Raymond Demitrio Tel (SERVICESOFTWARE · TEL1.NL).
+- Universale Suche: [suche.html](suche.html) – client-seitige Suche über die gesamte Struktur
+  (Index [search/search-index.json](search/search-index.json), Engine [search/search-engine.js](search/search-engine.js)).
+  Web-Worker-Pipeline (off-main-thread), Vorhersage/Autocomplete, Tippfehler-Toleranz (Levenshtein),
+  Bezugs-/Vergleichsworte, Kategorie-Filter und Fallback-Anfrageformular. **Massentauglich:**
+  kein zentraler DB-Server → kein Flaschenhals, unbegrenzt skalierbar via CDN, jeder Browser ist ein Such-Knoten.
+
 ## Manifest
 - Architektur-Manifest: [MANIFEST_SHADOWOS.md](MANIFEST_SHADOWOS.md) /
   Portal-Seite [shadowos-manifest.html](shadowos-manifest.html) (SHADOWOS Ω∞).
